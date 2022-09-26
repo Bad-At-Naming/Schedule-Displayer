@@ -2,45 +2,60 @@
   background-color: #15161f;
 }
 
-.button{
+
+button{
   background-color: #444444;
   vertical-align: middle;
-  border-radius: 13px;
   border-style: none;
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  height: 10%;
-  width: 15%;
-  line-height: 20px;
   list-style: none;
-  margin: 0;
-  outline: none;
   padding: 10px;
+  height: 10%;
   position: relative;
   text-decoration: none;
   transition: color 100ms;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center
+}
+
+.left_arrow_btn{
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+  
+}
+
+.left_arrow_btn:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+.right_arrow_btn{
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+  
+}
+
+.right_arrow_btn:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
 }
 
 h1 {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: white;
-  text-align: center;
+  text-align: center
 }
+
+.daytext{
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: white
+}
+
 
 .center-btn{
   margin-top:10px;
@@ -63,24 +78,16 @@ table {
 
 
 #events-table {
-  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 97%;
   padding: 20px;
   color: white;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 #events-table td, #events-table th {
-  border: 0.5px solid #cccccc;
+  border: 1px solid #cccccc;
   padding: 8px;
 }
 
