@@ -3,11 +3,11 @@ function mod(n, m) {
 }
 
 const TIMETABLE = {
-  "Monday": [["Monday Grade 10 Event 1", "Monday Grade 10 Event Timing 1", "Monday Grade 10 Event Location 1", ["X", "Streeton"]], ["Monday Grade 10 Event 2", "Monday Grade 10 Event Timing 2", "Monday Grade 10 Event Location 2", ["X"]], ["Monday Grade XI Event", "Monday Grade XI Event Timings", "Monday Grade XI Event Location", ["XI"]], ["Monday First Year Event", "Monday First Year Event Timings", "Monday First Year Event Location", ["FY"]], ["Monday Second Year Event", "Monday Second Year Event Timings", "Monday Second Year Event Location", ["SY"]]],
-  "Tuesday": [["Tuesday Grade 10 Event", "Tuesday Grade 10 Event Timing", "Tuesday Grade 10 Event Location", ["X", "Frere"]], ["Tuesday Grade XI Event", "Tuesday Grade XI Event Timings", "Tuesday Grade XI Event Location", ["XI"]], ["Tuesday First Year Event", "Tuesday First Year Event Timings", "Tuesday First Year Event Location", ["FY"]], ["Tuesday Second Year Event", "Tuesday Second Year Event Timings", "Tuesday Second Year Event Location", ["SY"]]],
-  "Wednesday": [["Wednesday Grade 10 Event", "Wednesday Grade 10 Event Timing", "Wednesday Grade 10 Event Location", ["X", "Napier"]], ["Wednesday Grade XI Event", "Wednesday Grade XI Event Timings", "Wednesday Grade XI Event Location", ["XI"]], ["Wednesday First Year Event", "Wednesday First Year Event Timings", "Wednesday First Year Event Location", ["FY"]]],
-  "Thursday": [["Thursday Grade 10 Event", "Thursday Grade 10 Event Timing", "Thursday Grade 10 Event Location", ["X", "Papworth"]], ["Thursday Grade XI Event", "Thursday Grade XI Event Timings", "Thursday Grade XI Event Location", ["XI"]], ["Thursday First Year Event", "Thursday First Year Event Timings", "Thursday First Year Event Location", ["FY"]]],
-  "Friday": [["Friday Grade 10 Event", "Friday Grade 10 Event Timing", "Friday Grade 10 Event Location", ["X"]], ["Friday Grade XI Event", "Friday Grade XI Event Timings", "Friday Grade XI Event Location", ["XI"]]]
+  "Monday": [["Monday Grade 10 Event 1", "Monday Grade 10 Event Timing 1", "Monday Grade 10 Event Location 1", ["X", "House 1"]], ["Monday Grade 10 Event 2", "Monday Grade 10 Event Timing 2", "Monday Grade 10 Event Location 2", ["X"]], ["Monday Grade XI Event", "Monday Grade XI Event Timings", "Monday Grade XI Event Location", ["XI", "House 2"]], ["Monday First Year Event", "Monday First Year Event Timings", "Monday First Year Event Location", ["FY", "House 3"]], ["Monday Second Year Event", "Monday Second Year Event Timings", "Monday Second Year Event Location", ["SY", "House 4"]]],
+  "Tuesday": [["Tuesday Grade 10 Event", "Tuesday Grade 10 Event Timing", "Tuesday Grade 10 Event Location", ["X", "House 1"]], ["Tuesday Grade XI Event", "Tuesday Grade XI Event Timings", "Tuesday Grade XI Event Location", ["XI", "House 2"]], ["Tuesday First Year Event", "Tuesday First Year Event Timings", "Tuesday First Year Event Location", ["FY", "House 3"]], ["Tuesday Second Year Event", "Tuesday Second Year Event Timings", "Tuesday Second Year Event Location", ["SY", "House 4"]]],
+  "Wednesday": [["Wednesday Grade 10 Event", "Wednesday Grade 10 Event Timing", "Wednesday Grade 10 Event Location", ["X", "House 1"]], ["Wednesday Grade XI Event", "Wednesday Grade XI Event Timings", "Wednesday Grade XI Event Location", ["XI", "House 2"]], ["Wednesday First Year Event", "Wednesday First Year Event Timings", "Wednesday First Year Event Location", ["FY", "House 3"]]],
+  "Thursday": [["Thursday Grade 10 Event", "Thursday Grade 10 Event Timing", "Thursday Grade 10 Event Location", ["X", "House 1"]], ["Thursday Grade XI Event", "Thursday Grade XI Event Timings", "Thursday Grade XI Event Location", ["XI", "House 2"]], ["Thursday First Year Event", "Thursday First Year Event Timings", "Thursday First Year Event Location", ["FY", "House 3"]]],
+  "Friday": [["Friday Grade 10 Event", "Friday Grade 10 Event Timing", "Friday Grade 10 Event Location", ["X", "House 1"]], ["Friday Grade XI Event", "Friday Grade XI Event Timings", "Friday Grade XI Event Location", ["XI"]]]
 }
 const DAYS = ["All", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 const COLORS = ["#9f2858", "#e35c33", "#35713a", "#4053b0", "#8232a4", "#bd8f26"];
@@ -27,7 +27,7 @@ var filtered_timetable = {
 }
 
 function filter_grade(tbl) {
-  var HOUSE_LIST = ["All Houses", "Streeton", "Frere", "Napier", "Papworth"]
+  var HOUSE_LIST = ["All Houses", "House 1", "House 2", "House 3", "House4"]
   var grade_filters = filters.filter(x => !HOUSE_LIST.includes(x))
   var filtered_timetable = {
     "Monday": [],
@@ -270,15 +270,15 @@ function Shift_House(a) {
   swap_house(house)
 
   var text = document.getElementById("housetext")
-  text.innerHTML = ["All Houses","Frere", "Napier", "Papworth", "Streeton"][house]
+  text.innerHTML = ["All Houses", "House 1", "House 2", "House 3", "House4"][house]
 }
 
 function swap_house(house) {
-  var HOUSE_LIST = ["All Houses","Frere", "Napier", "Papworth", "Streeton"]
+  var HOUSE_LIST = ["All Houses", "House 1", "House 2", "House 3", "House4"]
   filters = filters.filter(x => !HOUSE_LIST.includes(x))
   
   if (house == 0) {
-    filters = filters.concat(["All Houses","Frere", "Napier", "Papworth", "Streeton"])
+    filters = filters.concat(["All Houses", "House 1", "House 2", "House 3", "House4"])
   }
   else {
     filters = filters.concat(HOUSE_LIST[house])
