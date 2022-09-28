@@ -26,7 +26,9 @@ button{
 
 .center-btn {
   diaplay: flex;
-
+  width: 95%;
+  flex-grow:1;
+}
 .left_arrow_btn{
   border-bottom-left-radius: 13px;
   border-top-left-radius: 13px;
