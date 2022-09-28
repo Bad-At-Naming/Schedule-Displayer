@@ -1,5 +1,5 @@
 .body{
-  background-color: #15161f;
+  background-color: #15161f
 }
 
 
@@ -13,6 +13,7 @@ button{
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   list-style: none;
+  padding: 10px;
   height: 10%;
   position: relative;
   text-decoration: none;
@@ -25,21 +26,28 @@ button{
 
 .left_arrow_btn{
   border-bottom-left-radius: 13px;
-  border-top-left-radius: 13px;
-  
+  border-top-left-radius: 13px
 }
 
 .left_arrow_btn:hover {
-  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0)
 }
 .right_arrow_btn{
   border-bottom-right-radius: 13px;
-  border-top-right-radius: 13px;
-  
+  border-top-right-radius: 13px
+}
+
+.center-btn{
+  display: flex; 
+  width: 100%
+}
+
+span {
+  flex-grow: 1
 }
 
 .right_arrow_btn:hover {
-  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0)
 }
 
 h1 {
@@ -59,36 +67,38 @@ h1 {
 .center-btn{
   margin-top:10px;
   margin-bottom:10px;
-  text-align:center;
+  text-align:center
 }
 
 .center-tbl{
   margin-top:10px;
   margin-bottom:10px;
   margin-left:auto;
-  margin-right:auto;
+  margin-right:auto
 }
 
 table {
   width:95%;
 }
 
-/*OPPSETT AV TOP, TOPNAV, SIDENAV, MAIN, RIGHT OG FOOTER:*/
-
 
 #events-table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 97%;
+  padding: 20px;
   color: white;
   text-align: center;
 }
 
 #events-table td, #events-table th {
   border: 1px solid #cccccc;
+  padding: 8px;
 }
 
 .firstrow {
+  padding-top: 12px;
+  padding-bottom: 12px;
   background-color: #232433;
   color: white;}
 
