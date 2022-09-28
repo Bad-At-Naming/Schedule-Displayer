@@ -14,7 +14,6 @@ button{
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   list-style: none;
   padding: 10px;
-  height: 10%;
   position: relative;
   text-decoration: none;
   transition: color 100ms;
@@ -25,7 +24,7 @@ button{
 }
 
 .center-btn {
-  diaplay: flex;
+  display: flex;
   width: 95%;
   flex-grow:1;
 }
