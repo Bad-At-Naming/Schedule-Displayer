@@ -27,7 +27,7 @@ var filtered_timetable = {
 }
 
 function filter_grade(tbl) {
-  var HOUSE_LIST = ["All Houses", "House 1", "House 2", "House 3", "House4"]
+  var HOUSE_LIST = ["All Houses", "House 1", "House 2", "House 3", "House 4"]
   var grade_filters = filters.filter(x => !HOUSE_LIST.includes(x))
   var filtered_timetable = {
     "Monday": [],
@@ -270,15 +270,15 @@ function Shift_House(a) {
   swap_house(house)
 
   var text = document.getElementById("housetext")
-  text.innerHTML = ["All Houses", "House 1", "House 2", "House 3", "House4"][house]
+  text.innerHTML = ["All Houses", "House 1", "House 2", "House 3", "House 4"][house]
 }
 
 function swap_house(house) {
-  var HOUSE_LIST = ["All Houses", "House 1", "House 2", "House 3", "House4"]
+  var HOUSE_LIST = ["All Houses", "House 1", "House 2", "House 3", "House 4"]
   filters = filters.filter(x => !HOUSE_LIST.includes(x))
   
   if (house == 0) {
-    filters = filters.concat(["All Houses", "House 1", "House 2", "House 3", "House4"])
+    filters = filters.concat(["All Houses", "House 1", "House 2", "House 3", "House 4"])
   }
   else {
     filters = filters.concat(HOUSE_LIST[house])
