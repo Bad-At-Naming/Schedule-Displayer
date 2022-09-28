@@ -24,6 +24,9 @@ button{
   text-align: center
 }
 
+.center-btn {
+  diaplay: flex;
+
 .left_arrow_btn{
   border-bottom-left-radius: 13px;
   border-top-left-radius: 13px;
