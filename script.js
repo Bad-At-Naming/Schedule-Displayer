@@ -233,6 +233,16 @@ else {
 
 
 document.getElementById("gradetext").style.backgroundColor = gCOLORS[grade]
+if (grade == 4) {
+  document.getElementById("gradetext").style.color = "#000000";
+  document.getElementById("grade_lb").style.color = "#000000"
+  document.getElementById("grade_rb").style.color = "#000000"
+}
+else {
+  document.getElementById("gradetext").style.color = "#ffffff";
+  document.getElementById("grade_lb").style.color = "#ffffff"
+  document.getElementById("grade_rb").style.color = "#ffffff"
+}
 document.getElementById("grade_lb").style.backgroundColor = gCOLORS[grade]
 document.getElementById("grade_rb").style.backgroundColor = gCOLORS[grade]
 console.log(selected_grade)
@@ -298,9 +308,13 @@ function swap_house(house) {
   document.getElementById("housetext").style.backgroundColor = hCOLORS[house]
   if (house == 0 || house==3) {
     document.getElementById("housetext").style.color = "#000000";
+    document.getElementById("house_lb").style.color = "#000000"
+    document.getElementById("house_rb").style.color = "#000000"
   }
   else {
     document.getElementById("housetext").style.color = "#ffffff";
+    document.getElementById("house_lb").style.color = "#ffffff"
+    document.getElementById("house_rb").style.color = "#ffffff"
   }
   document.getElementById("house_lb").style.backgroundColor = hCOLORS[house]
   document.getElementById("house_rb").style.backgroundColor = hCOLORS[house]
