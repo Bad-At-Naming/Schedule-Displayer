@@ -3,15 +3,16 @@ function mod(n, m) {
 }
 
 const TIMETABLE = {
-  "Monday": [["Monday Grade 10 Event 1", "Monday Grade 10 Event Timing 1", "Monday Grade 10 Event Location 1", ["X", "House 1"]], ["Monday Grade 10 Event 2", "Monday Grade 10 Event Timing 2", "Monday Grade 10 Event Location 2", ["X"]], ["Monday Grade XI Event", "Monday Grade XI Event Timings", "Monday Grade XI Event Location", ["XI", "House 2"]], ["Monday First Year Event", "Monday First Year Event Timings", "Monday First Year Event Location", ["FY", "House 3"]], ["Monday Second Year Event", "Monday Second Year Event Timings", "Monday Second Year Event Location", ["SY", "House 4"]]],
-  "Tuesday": [["Tuesday Grade 10 Event", "Tuesday Grade 10 Event Timing", "Tuesday Grade 10 Event Location", ["X", "House 1"]], ["Tuesday Grade XI Event", "Tuesday Grade XI Event Timings", "Tuesday Grade XI Event Location", ["XI", "House 2"]], ["Tuesday First Year Event", "Tuesday First Year Event Timings", "Tuesday First Year Event Location", ["FY", "House 3"]], ["Tuesday Second Year Event", "Tuesday Second Year Event Timings", "Tuesday Second Year Event Location", ["SY", "House 4"]]],
-  "Wednesday": [["Wednesday Grade 10 Event", "Wednesday Grade 10 Event Timing", "Wednesday Grade 10 Event Location", ["X", "House 1"]], ["Wednesday Grade XI Event", "Wednesday Grade XI Event Timings", "Wednesday Grade XI Event Location", ["XI", "House 2"]], ["Wednesday First Year Event", "Wednesday First Year Event Timings", "Wednesday First Year Event Location", ["FY", "House 3"]]],
-  "Thursday": [["Thursday Grade 10 Event", "Thursday Grade 10 Event Timing", "Thursday Grade 10 Event Location", ["X", "House 1"]], ["Thursday Grade XI Event", "Thursday Grade XI Event Timings", "Thursday Grade XI Event Location", ["XI", "House 2"]], ["Thursday First Year Event", "Thursday First Year Event Timings", "Thursday First Year Event Location", ["FY", "House 3"]]],
-  "Friday": [["Friday Grade 10 Event", "Friday Grade 10 Event Timing", "Friday Grade 10 Event Location", ["X", "House 1"]], ["Friday Grade XI Event", "Friday Grade XI Event Timings", "Friday Grade XI Event Location", ["XI"]]]
+  "Monday": [["Monday Grade 10 Event 1 (Frere)", "Monday Grade 10 Event Timing 1", "Monday Grade 10 Event Location 1", ["X", "Frere"]], ["Monday Grade 10 Event 2 (Streeton)", "Monday Grade 10 Event Timing 2", "Monday Grade 10 Event Location 2", ["X", "Streeton"]], ["Monday Grade XI Event (Napier)", "Monday Grade XI Event Timings", "Monday Grade XI Event Location", ["XI", "Napier"]], ["Monday First Year Event (Papworth)", "Monday First Year Event Timings", "Monday First Year Event Location", ["FY", "Papworth"]], ["Monday Second Year Event (Streeton)", "Monday Second Year Event Timings", "Monday Second Year Event Location", ["SY", "Streeton"]]],
+  "Tuesday": [["Tuesday Grade 10 Event (Frere)", "Tuesday Grade 10 Event Timing", "Tuesday Grade 10 Event Location", ["X", "Frere"]], ["Tuesday Grade XI Event (Napier)", "Tuesday Grade XI Event Timings", "Tuesday Grade XI Event Location", ["XI", "Napier"]], ["Tuesday First Year Event (Papworth)", "Tuesday First Year Event Timings", "Tuesday First Year Event Location", ["FY", "Papworth"]], ["Tuesday Second Year Event (Napier and Streeton)", "Tuesday Second Year Event Timings ", "Tuesday Second Year Event Location", ["SY", "Streeton", "Napier"]]],
+  "Wednesday": [["Wednesday Grade 10 Event (Frere)", "Wednesday Grade 10 Event Timing", "Wednesday Grade 10 Event Location", ["X", "Frere"]], ["Wednesday Grade All Grades Event (Papworth and Streeton)", "Wednesday All Grades Event Timings", "Wednesday All Grades Event Location", ["XI", "X", "FY", "SY", "Papworth", "Streeton"]], ["Wednesday First Year Event (Papworth)", "Wednesday First Year Event Timings", "Wednesday First Year Event Location", ["FY", "Papworth"]]],
+  "Thursday": [["Thursday Grade 10 Event(Frere)", "Thursday Grade 10 Event Timing", "Thursday Grade 10 Event Location", ["X", "Frere"]], ["Thursday Grade XI Event (Napier)", "Thursday Grade XI Event Timings", "Thursday Grade XI Event Location", ["XI", "Napier"]], ["Thursday First Year Event (Streeton)", "Thursday First Year Event Timings", "Thursday First Year Event Location", ["FY", "Streeton"]]],
+  "Friday": [["Friday Grade 10 Event(Frere and Napier)", "Friday Grade 10 Event Timing", "Friday Grade 10 Event Location", ["X", "Frere", "Napier"]], ["Friday Full School Event", "Friday Full School Event Timings", "Friday Full School Event Location", ["XI", "X", "FY", "SY", "Frere", "Napier", "Papworth", "Streeton"]]]
 }
 const DAYS = ["All", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 const COLORS = ["#9f2858", "#e35c33", "#35713a", "#4053b0", "#8232a4", "#bd8f26"];
-const gCOLORS = ["#9f2858", "#e35c33", "#35713a", "#4053b0", "#8232a4", "#bd8f26"];
+const gCOLORS = ["#7e0200", "#1f9168", "#3f798f", "#8f3f88", "#b5a953"]
+const hCOLORS = ["#f5b642", "#bd0000", "#05008a", "#4edbe6", "#01470e"]
 
 var filters = [];
 var selected_day = 0
@@ -27,7 +28,7 @@ var filtered_timetable = {
 }
 
 function filter_grade(tbl) {
-  var HOUSE_LIST = ["All Houses", "House 1", "House 2", "House 3", "House 4"]
+  var HOUSE_LIST = ["All Houses", "Frere", "Napier", "Papworth", "Streeton"]
   var grade_filters = filters.filter(x => !HOUSE_LIST.includes(x))
   var filtered_timetable = {
     "Monday": [],
@@ -101,8 +102,8 @@ if (!clear) {
   var cell20 = row.insertCell(1);
   var cell30 = row.insertCell(2);
 
-  cell20.innerHTML = "Event";
-  cell10.innerHTML = "Time";
+  cell20.innerHTML = "Time";
+  cell10.innerHTML = "Event";
   cell30.innerHTML = "Location";
   document.getElementById("daytext").style.backgroundColor = COLORS[day]
   document.getElementById("day_lb").style.backgroundColor = COLORS[day]
@@ -172,8 +173,8 @@ var cell2 = row.insertCell(1);
 var cell3 = row.insertCell(2);
 var cell4 = row.insertCell(3);
 
-cell2.innerHTML = "Day";
-cell1.innerHTML = "Event";
+cell2.innerHTML = "Event";
+cell1.innerHTML = "Day";
 cell3.innerHTML = "Time";
 cell4.innerHTML = "Location";
 for (var i = 1; i < 6; i++) {
@@ -270,15 +271,15 @@ function Shift_House(a) {
   swap_house(house)
 
   var text = document.getElementById("housetext")
-  text.innerHTML = ["All Houses", "House 1", "House 2", "House 3", "House 4"][house]
+  text.innerHTML = ["All Houses", "Frere", "Napier", "Papworth", "Streeton"][house]
 }
 
 function swap_house(house) {
-  var HOUSE_LIST = ["All Houses", "House 1", "House 2", "House 3", "House 4"]
+  var HOUSE_LIST = ["All Houses", "Frere", "Napier", "Papworth", "Streeton"]
   filters = filters.filter(x => !HOUSE_LIST.includes(x))
   
   if (house == 0) {
-    filters = filters.concat(["All Houses", "House 1", "House 2", "House 3", "House 4"])
+    filters = filters.concat(["All Houses", "Frere", "Napier", "Papworth", "Streeton"])
   }
   else {
     filters = filters.concat(HOUSE_LIST[house])
@@ -294,8 +295,14 @@ function swap_house(house) {
   }
   
   
-  document.getElementById("housetext").style.backgroundColor = gCOLORS[house]
-  document.getElementById("house_lb").style.backgroundColor = gCOLORS[house]
-  document.getElementById("house_rb").style.backgroundColor = gCOLORS[house]
+  document.getElementById("housetext").style.backgroundColor = hCOLORS[house]
+  if (house == 0 || house==3) {
+    document.getElementById("housetext").style.color = "#000000";
+  }
+  else {
+    document.getElementById("housetext").style.color = "#ffffff";
+  }
+  document.getElementById("house_lb").style.backgroundColor = hCOLORS[house]
+  document.getElementById("house_rb").style.backgroundColor = hCOLORS[house]
   }
   
