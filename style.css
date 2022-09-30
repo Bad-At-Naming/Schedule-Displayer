@@ -21,15 +21,34 @@ button{
   padding-bottom:5px;
 }
 
-.left_arrow_btn{
+.toggle {
   height:100%;
-  width:8%;
+  width:60%;
   margin-left: 5%;
   border-bottom-left-radius: 13px;
   border-top-left-radius: 13px;
   text-align:center;
-  flex-grow:1;
-  flex-shrink:10
+  margin-right: 5%;
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+  background-color: #008000;
+  flex-grow:10;
+  flex-shrink:2.5
+}
+
+.toggle:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+.left_arrow_btn{
+  height:100%;
+  width:16%;
+  margin-left: 5%;
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+  flex-grow:4;
+  flex-shrink:1;
+  text-align:center
 }
 
 .left_arrow_btn:hover {
@@ -37,14 +56,13 @@ button{
 }
 .right_arrow_btn{
   height:100%;
-  width:8%;
+  width:16%;
   margin-right: 5%;
   border-bottom-right-radius: 13px;
   border-top-right-radius: 13px;
-  text-align:center;
-  flex-grow:1;
-  flex-shrink:10
-
+  flex-grow:4;
+  flex-shrink:1;
+  text-align:center
 }
 
 .right_arrow_btn:hover {
@@ -65,7 +83,7 @@ h1 {
   color: white;
   text-align: center;
   flex-grow:10;
-  flex-shrink:1
+  flex-shrink:2.5
 }
 
 #gradetext{
@@ -75,7 +93,7 @@ h1 {
   color: white;
   text-align: center;
   flex-grow:10;
-  flex-shrink:1
+  flex-shrink:2.5
 }
 
 #housetext{
@@ -85,13 +103,14 @@ h1 {
   color: white;
   text-align: center;
   flex-grow:10;
-  flex-shrink:1
+  flex-shrink:2.5
 }
 
 span{
   width:60%;
   display:flex;
-  text-align:center
+  flex-grow:1;
+  flex-shrink: 1;
 }
   
 .center-btn{
