@@ -1,149 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
-
-/* Sets the background color of the body to blue. Sets font to Rubik */
-
-body {
-  background-color: #0b0c1a;
-  font-family: 'rubik', sans-serif;
-}
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
+.body{
+  background-color: #15161f;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border:1px solid #999999;
-  z-index: 1;
-}
 
-/* Links inside the dropdown */
-.dropdown-content a {
-
-  color: black;
-  padding: 12px 16px;
+button{
+  background-color: #444444;
+  text-align: center;
+  vertical-align: middle;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  list-style: none;
+  height: 10%;
   text-decoration: none;
-  display: block;
-  z-index: 1;
+  transition: color 100ms;
+  user-select: none;
+  padding-top: 5px;
+  padding-bottom:5px;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown-content a:active {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.accordion .container .content dropdown:hover .dropdown-content {
-  width:0px;
-  height:0px;
-  display: block;
-  color: rgba(0,0,0,0);
+.toggle {
+  height:100%;
+  width:60%;
+  margin-left: 5%;
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+  text-align:center;
+  margin-right: 5%;
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+  background-color: #008000;
+  flex-grow:10;
+  flex-shrink:2.5
 }
 
-.accordion .container .content dropdown:active .dropdown-content {
-    width:0px;
-    height:0px;
-    display: block;
-    color: rgba(0,0,0,0);
+.toggle:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
 }
 
-.accordion .container.active .content .dropdown:hover .dropdown-content {display: block;    width:auto;
-  height:auto;}
+.left_arrow_btn{
+  height:100%;
+  width:16%;
+  margin-left: 5%;
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+  flex-grow:4;
+  flex-shrink:1;
+  text-align:center
+}
 
-.accordion .container.active .content .dropdown:active .dropdown-content {display: block;    width:auto;
-    height:auto;}
+.left_arrow_btn:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+.right_arrow_btn{
+  height:100%;
+  width:16%;
+  margin-right: 5%;
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+  flex-grow:4;
+  flex-shrink:1;
+  text-align:center
+}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-/* Aligns the heading text to the center. */
- 
+.right_arrow_btn:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
 h1 {
-    float: center;
-    color: #FEFEFE;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center
 }
 
-/* Sets the width for the accordion. Sets the margin to 90px on the top and bottom and auto to the left and right */
+#daytext{
+  height:100%;
+  width:80%;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  text-align: center;
+  flex-grow:10;
+  flex-shrink:2.5
+}
 
-.accordion {
-  width: 95%;
-  color: #FEFEFE;
-  background-color: rgb(35,36,50);
+#gradetext{
+  height:100%;
+  width:80%;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  text-align: center;
+  flex-grow:10;
+  flex-shrink:2.5
+}
+
+#housetext{
+  height:100%;
+  width:80%;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  text-align: center;
+  flex-grow:10;
+  flex-shrink:2.5
+}
+
+span{
+  width:60%;
+  display:flex;
+  flex-grow:1;
+  flex-shrink: 1;
+}
+  
+.center-btn{
+  margin-top:10px;
+  margin-bottom:10px;
+  display:flex;
+}
+
+.center-tbl{
+  margin-top:10px;
+  margin-bottom:10px;
   margin-left:auto;
   margin-right:auto;
-    border-left:1px solid #fefefe;
-    border-right:1px solid #fefefe;
-
 }
 
-.accordion .container {
-    position: relative;
-    margin: 10px 10px;
-  }
-  
-  /* Positions the labels relative to the #2673B8.container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
-  
-  .accordion .label {
-    position: relative;
-    font-size: 30px;
-    color: #fefefe;
-    cursor: pointer;
-  }
-
-  /* Positions the plus sign 5px from the right. Centers it using the transform property. */
-
-.accordion .label::before {
-    content: '+';
-    color: #fefefe;
-    position: absolute;
-    top: 50%;
-    right: -5px;
-    font-size: 30px;
-    transform: translateY(-50%);
-  }
-  
-  /* Hides the content (height: 0), decreases font size, justifies text and adds transition */
-  
-  .accordion .content {
-    background: rgb(35,36,50);
-    font-size: 20px;
-    vertical-align: middle;
-    z-index:-50;
-    color:rgba(35,36,50,0);
-    transition: 0s;
-    height:0px
-  }
-  
-  /* Adds a horizontal line between the contents */
-  
-  .accordion hr {
-    width: 50;
-    margin-left: 0;
-    border: 0.5px solid #fefefe;
-  }
-  
-
-
-/* Unhides the content part when active. Sets the height */
-
-.accordion .container.active .content {
-    vertical-align: middle;
-    color:#eeeeee;
-    transition: 0s;
-    height:50px
+table {
+  width:95%;
 }
 
+/*OPPSETT AV TOP, TOPNAV, SIDENAV, MAIN, RIGHT OG FOOTER:*/
 
-  /* Changes from plus sign to negative sign once active */
-  
-  .accordion .container.active .label::before {
-    content: '-';
-    font-size: 30px;
-  }
-  
+
+#events-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 97%;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+#events-table td, #events-table th {
+  border: 1px solid #cccccc;
+  padding: 8px;
+}
+
+.firstrow {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #232433;
+  color: white;}
+
+.distance-from-sides {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:10px;
+}
