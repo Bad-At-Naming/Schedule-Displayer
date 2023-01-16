@@ -36,21 +36,6 @@ button{
   flex-shrink:2.5
 }
 
-.toggle:hover:before {
-  background-image: linear-gradient(rgb(0 0 0/0%) 0 0);
-}
-
-.toggle:hover {
-  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
-}
-
-.toggle:hover:after {
-  background-image: linear-gradient(rgb(0 0 0/0%) 0 0);
-}
-
-#invis:hover{
-  background-image: linear-gradient(rgb(0 0 0/0%) 0 0);
-}
 
 .left_arrow_btn{
   height:100%;
@@ -63,9 +48,7 @@ button{
   text-align:center
 }
 
-.left_arrow_btn:hover {
-  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
-}
+
 .right_arrow_btn{
   height:100%;
   width:16%;
@@ -77,9 +60,6 @@ button{
   text-align:center
 }
 
-.right_arrow_btn:hover {
-  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
-}
 
 h1 {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
