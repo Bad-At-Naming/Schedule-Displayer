@@ -1,4 +1,4 @@
-# Week Ahead proposal([Accessible Here](https://bad-at-naming.github.io/Schedule-Displayer/))
+# Week Ahead proposal ([Accessible Here](https://bad-at-naming.github.io/Schedule-Displayer/))
 
 ## TO DO
 * Fix input system [IMPORTANT]
