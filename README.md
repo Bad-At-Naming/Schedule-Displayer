@@ -1,5 +1,6 @@
 # Week Ahead proposal ([Accessible Here](https://bad-at-naming.github.io/Schedule-Displayer/))
-
+## Why does this exist?
+I have bad eyesight and really don't want to use a pdf with small text anymore
 ## TO DO
 ### High priority
 * ~~Refactoring~~
