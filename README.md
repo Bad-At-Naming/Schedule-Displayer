@@ -1,7 +1,17 @@
 # Week Ahead proposal ([Accessible Here](https://bad-at-naming.github.io/Schedule-Displayer/))
 
 ## TO DO
-* Fix input system [IMPORTANT]
+
+### High priority
+* ~~Refactoring~~
+* Fix input system 
 * Adjust fonts and colors, remove unnecessary lines from main.css
-* Add tracking to judge popularity (conditional on meeting)
+* Explore offline possibilities
+
+### Medium Priority
 * Add a memory feature (remembers previous settings)
+
+### Low Priority
+* Add tracking to judge popularity (conditional on meeting)
+* Add tutorial window (conditional on meeting)
+* Dark mode
