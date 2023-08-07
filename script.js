@@ -9,11 +9,11 @@ $.getJSON("https://bad-at-naming.github.io/Schedule-Displayer/timetable.json", l
 
 
 const DAYS = ["All", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-const COLORS = ["#a9a9eb", "#dba2c6", "#d69696", "#f5a97d", "#fcd2a7",  "#f7d8c5", "#a57555", "#9ff4dc"];
-const gCOLORS = ["#ffc7d7", "#e1b877", "#dedea4","#a5d3c0", "#c4d5ed" ]
-const hCOLORS = ["#d6b983", "#e08580", "#6f7bcb", "#a4dff8", "#86b588"]
+const COLORS = [ "#225994", "#00a0a3", "#8282ff", "#ff99da", "#ff8a8a", "#f77457", "#f79e45", ]
+const gCOLORS = ["#97d1a6", "#ffdb5d", "#ffa455", "#b64b1d","#431d40",  ]
+const hCOLORS = ["#f2d574", "#e08580", "#6f7bcb", "#a4dff8", "#86b588"]
 const TOGGLES = ["Society Events", "Academics", "Sports", "Misc", "All_t"]
-const TOGGLE_COLORS = ["#d9ffc9", "#ff9e94","#b3d4e6", "#fff396", "#89ff95"]
+const TOGGLE_COLORS = ["#d9ffc9", "#ff9e94","#b3d4e6", "#fff396", "#1a143b"]
 const GRADE_LIST = ["All_g","X", "XI", "FY", "SY"]
 const HOUSE_LIST = ["All Houses", "Frere", "Napier", "Papworth", "Streeton"]
 var filtered_timetable = { // Needed to reset the var filtered timetable
@@ -148,9 +148,10 @@ if (!additive) {
   document.getElementById("daytext").style.backgroundColor = COLORS[day]
   document.getElementById("day_lb").style.backgroundColor = COLORS[day]
   document.getElementById("day_rb").style.backgroundColor = COLORS[day]
+
+  
   var table = document.getElementById("table-body");
   var myStringArray = filtered_timetable[DAYS[day]];
-  console.log(myStringArray)
   var arrayLength = myStringArray.length;
   for (var i = 0; i < arrayLength; i++) {
     var row = table.insertRow(table.rows.length);
@@ -205,9 +206,17 @@ else {
     cell3.style.background = COLOR_TOGGLE_MAP[myStringArray[i][3].filter(x => !GRADE_LIST.includes(x)).filter(x => !HOUSE_LIST.includes(x))[0]]; 
 
 
+
   }
 }
 selected_day = day;
+console.log(selected_day)
+if (selected_day!=8){
+document.getElementById("daytext").style.color = "#000000"
+}
+else{
+  document.getElementById("daytext").style.color = "#ffffff"
+}
 }
 
 function All() {
@@ -236,6 +245,7 @@ selected_day = 0
 document.getElementById("daytext").style.backgroundColor = COLORS[0]
 document.getElementById("day_lb").style.backgroundColor = COLORS[0]
 document.getElementById("day_rb").style.backgroundColor = COLORS[0]
+document.getElementById("daytext").style.color = "#ffffff"
 }
 
 function load(json) { // Triggered on loading the page
@@ -283,8 +293,8 @@ else {
 
 
 document.getElementById("gradetext").style.backgroundColor = gCOLORS[grade]
-/*
-if (grade == 4) {
+
+if (grade != 4 &&  grade != 3) {
   document.getElementById("gradetext").style.color = "#000000";
   document.getElementById("grade_lb").style.color = "#000000"
   document.getElementById("grade_rb").style.color = "#000000"
@@ -294,7 +304,7 @@ else {
   document.getElementById("grade_lb").style.color = "#ffffff"
   document.getElementById("grade_rb").style.color = "#ffffff"
 } 
-*/
+
 document.getElementById("grade_lb").style.backgroundColor = gCOLORS[grade]
 document.getElementById("grade_rb").style.backgroundColor = gCOLORS[grade]
 }
@@ -382,11 +392,13 @@ function Toggle(n) {
     if (n > 3) { // If all is pressed
       document.getElementById(TOGGLES[i]).style.backgroundColor=TOGGLE_COLORS[i] //Off to On
       filters = filters.concat(TOGGLES[i])
+      document.getElementById("All_t").style.color = "#ffffff"
   }
   else {
     document.getElementById(TOGGLES[n]).style.backgroundColor=TOGGLE_COLORS[n] //Off to On
     filters = filters.filter(x => !TOGGLES.includes(x))
     filters = filters.concat(TOGGLES[n])
+    document.getElementById("All_t").style.color = "#000000"
 
   }
 }
